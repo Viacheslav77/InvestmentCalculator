@@ -16,7 +16,7 @@ public final class App {
     public static void main(String[] args) {
 
         SourceData data = new SourceData();
-        InvestmentCalculator investmentCalculator = new InvestmentCalculator();      
+        InvestmentCalculator investmentCalculator = new InvestmentCalculator();
         try {
             data.setAgreementDate(LocalDate.of(2020, 01, 01));
             data.setСalculationDate();
@@ -30,8 +30,8 @@ public final class App {
             // Display results
             System.out.println(calc.getSourceData().toString());
             System.out.println("Calculated data\n----------------");
-            System.out.println("The monthly payment is " + calc.getMonthlyPayment().setScale(2, RoundingMode.HALF_UP));
-            System.out.println("The total payment is $" + calc.getSumAllPayments() + "\n----------------\n");
+            System.out.println("The monthly payment: $" + calc.getMonthlyPayment().setScale(2, RoundingMode.HALF_UP));
+            System.out.println("The  total  payment: $" + calc.getSumAllPayments() + "\n----------------\n");
 
         } catch (Exception e) {
             e.printStackTrace();

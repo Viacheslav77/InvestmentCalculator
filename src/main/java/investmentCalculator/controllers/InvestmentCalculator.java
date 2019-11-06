@@ -6,14 +6,18 @@ import investmentCalculator.interfaces.InvestmentCalculatorInterface;
 import investmentCalculator.model.InvestmentType;
 
 public class InvestmentCalculator implements InvestmentCalculatorInterface {
-    
+
     @Override
-    public AbstractCalculator getCalculator(InvestmentType type) {      
-       if (type.equals(InvestmentType.FIXEDPAYMENT)){
-           return new FixedPaymentCalculator (); 
-       }else {
-        throw new IllegalArgumentException("invalid InvestmentType");
-       }  
-        // here you can add logic if other calculators appear in the future   
-    }  
+    public AbstractCalculator getCalculator(InvestmentType type) {
+        
+        if (type.equals(InvestmentType.FIXEDPAYMENT)) {
+            return new FixedPaymentCalculator();
+        }       
+        // here you can add logic if other calculators appear in the future
+        
+        else {
+            throw new IllegalArgumentException("invalid InvestmentType");
+        }
+        
+    }
 }
